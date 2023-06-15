@@ -1,0 +1,42 @@
+{{!-- HEADER to layout template-7 --}}
+
+
+<div class="hero">
+  {{#with hero}}
+    <div class="hero_data">
+      <h1 class="hero_title">{{title}}</h1>
+      <p class="hero_text">{{description}}</p>
+
+      <div class="hero_button">
+        <a href="{{button.url}}" class="hero_button_text linked_obj">{{button.text}}</a>
+      </div>      
+    </div>
+  {{/with}}
+</div>
+
+
+<div class="about">
+  {{#with about}}
+    <h3 class="about_title">{{heading}}</h3>
+    <p class="about_text">{{info}}</p>
+  {{/with}}  
+</div>
+
+
+<main class="articles">
+
+  <div class="articles_header">
+    <h2 class="articles_title">Our Articles</h2>
+    <div class="articles_button">
+      <span class="articles_button_text linked_obj">View All</span>      
+    </div>    
+  </div>
+
+  <div class="articles_cards">
+    {{#each articles}}
+      {{> articleCardDark}}
+    {{/each}}
+  </div>
+</main>
+
+{{!-- FOOTER to layout template-7 --}}
