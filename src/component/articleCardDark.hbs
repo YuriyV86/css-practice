@@ -1,0 +1,18 @@
+<div class='art_card'>
+  <div class='art_card_img_box'>
+    <img class='art_card_img' src='{{photo}}' />
+
+    {{#if isNew}}
+      <div class='badge_new_box'>
+        <span class='badge_new_text'>NEW</span>
+      </div>
+    {{/if}}
+  </div>
+
+  <h4 class='art_card_title'>{{name}}</h4>
+  <p class='art_card_text'>{{description}}</p>
+
+  <div class='art_card_button'>
+    <span class='art_card_button_text linked_obj'>Read All</span>
+  </div>
+</div>
