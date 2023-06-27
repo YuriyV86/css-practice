@@ -75,56 +75,69 @@
       </section>
 
       <section class='page_section page_section_light'>
-        <div class='page_content features_section'>
+        <div class='page_content features_section features_section_img1'>
           <h2 class="features_title">Work more easily with everyone</h2>
           <p class="features_description double_line">Stay on the same page and make decisions faster by bringing all of your work communication into one place.</p>
 
           <div class="features_grid_4">
-            <div class="feat_card">
-              <span class="icon feat_icon click" style="background-image: url('/svg/feature/connect.svg');"></span>
-              <strong class="">Slack Connect</strong>
-              <p class="double_line">Collaborate with teams at other companies the same way you do with teams at your own.</p>
-              <a href="#" class="icon icon_arrow click feat_link"></a>
-            </div>
-
-            <div class="feat_card">
-              <span class="icon feat_icon click" style="background-image: url('/svg/feature/channels.svg');"></span>
-              <strong class="feat_card_title">Channels</strong>
-              <a href="#" class="icon icon_arrow click feat_link"></a>
-            </div>
-
-            <div class="feat_card">
-              <span class="icon feat_icon click" style="background-image: url('/svg/feature/huddles.svg');"></span>
-              <strong class="feat_card_title">Huddles</strong>
-              <a href="#" class="icon icon_arrow click feat_link"></a>
-            </div>
-
-            <div class="feat_card">
-              <span class="icon feat_icon click" style="background-image: url('/svg/feature/clips.svg');"></span>
-              <strong class="feat_card_title">Clips</strong>
-              <a href="#" class="icon icon_arrow click feat_link"></a>
-            </div>
-
-            <div class="feat_card">
-              <span class="icon feat_icon click" style="background-image: url('/svg/feature/canvas.svg');"></span>
-              <strong class="feat_card_title">Canvas</strong>
-              <a href="#" class="icon icon_arrow click feat_link"></a>
-            </div>
-
-            <div class="feat_card">
-              <span class="icon feat_icon click" style="background-image: url('/svg/feature/messaging.svg');"></span>
-              <strong class="feat_card_title">Messaging</strong>
-              <a href="#" class="icon icon_arrow click feat_link"></a>
-            </div>
-
-            <div class="feat_card">
-              <span class="icon feat_icon click" style="background-image: url('/svg/feature/access.svg');"></span>
-              <strong class="feat_card_title">Accessibility</strong>
-              <a href="#" class="icon icon_arrow click feat_link"></a>
-            </div>
+            {{> feat_card img_url='/svg/feature/connect.svg' title='Slack Connect' description='Collaborate with teams at other companies the same way you do with teams at your own.'}}
+            {{> feat_card img_url='/svg/feature/channels.svg' title='Channels'}} 
+            {{> feat_card img_url='/svg/feature/huddles.svg' title='Huddles'}}
+            {{> feat_card img_url='/svg/feature/clips.svg' title='Clips'}}
+            {{> feat_card img_url='/svg/feature/canvas.svg' title='Canvas'}}
+            {{> feat_card img_url='/svg/feature/messaging.svg' title='Messaging'}}
+            {{> feat_card img_url='/svg/feature/access.svg' title='Accessibility'}} 
           </div>
+        </div>
+      </section>
 
-        </div>  
+      {{!-- Home task  --}}
+      <section class='page_section page_section_light'>
+        <div class="page_content features_section features_section2">
+          <div class="features_grid_2">
+            <span class="features_section_img2"></span>
+            <div class="features_2_section_title">
+              <h2 class="features_title">What you need, when you need it</h2>
+              <p class="features_description double_line">Spend less time shuffling tabs with a comprehensive message archive and all your work tools at your fingertips.</p>            
+            </div>            
+          </div>
+          
+          <div class="features_grid_3">
+            {{> feat_card }}
+            {{> feat_card img_url='/svg/feature/integration.svg' title='Apps and Integrations' description='Streamline work by connecting Slack with other services like Google Drive, Office 365 and over 2,200 more.'}}
+            {{> feat_card img_url='/svg/feature/builder.svg' title='Workflow Builder' description='Automate routine actions and communication, so you can get back to the kind of work only humans can do.'}}
+            {{> feat_card img_url='/svg/feature/search.svg' title='Search'}}
+            {{> feat_card img_url='/svg/feature/sharing.svg' title='File sharing'}}
+          </div>          
+        </div>
+      </section>
+
+      <section class="page_section customer_section">
+        <div class="customer">
+          <span class="deliveroo_main_img"></span>
+
+          <div class="deliveroo_data">
+            <quote class="deliveroo_quote">“The thing that keeps us connected the most is Slack. It’s a very immediate and straightforward 
+  method of communication, and really the only channel that people prefer and enjoy using.”</quote>
+            <span class="deliveroo_img"></span>
+            <span class="deliveroo_name">Will Sprunt, CIO, Deliveroo</span>            
+          </div>
+        </div>        
+      </section>
+
+      <section class="page_section promo_section">
+        <div class="promo">
+          
+          <h3 class="promo_title">Explore more about working in Slack</h3>
+          <div class="promo_data">
+            {{> promo_card url_img='/img/promo-slack.png' card_sub_title='Slack Tutorials' card_title='Slack 101'}}
+            {{> promo_card url_img='/img/promo-figure.png' card_sub_title='Slack vs. Email' card_title='An easier, more
+organized way to work'}}
+            {{> promo_card url_img='/img/promo-customers.png' card_sub_title='Customer Stories' card_title='How Fastly uses Slack
+Connect to wow
+enterprise customers'}}
+          </div>
+        </div>        
       </section>
     </div>
   </body>
