@@ -1,0 +1,21 @@
+<div class='feat_card'>
+  {{#if img_url}}
+    <span
+      class='icon feat_icon click'
+      style="background-image: url('{{img_url}}');"
+    ></span>
+  {{/if}}
+
+  <strong class='feat_card_title'>{{title}}</strong>
+
+  {{#if description}}
+    <p class='double_line'>{{description}}</p>
+  {{/if}}
+
+  {{#if img_url}}
+    <a
+      href='{{img_url}}'
+      class='icon icon_arrow click feat_link'
+    ></a>
+  {{/if}}
+</div>

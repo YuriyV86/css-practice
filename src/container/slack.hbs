@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>
+      Slack Page
+    </title>
+
+    <meta charset='utf-8' />
+
+    <link
+      rel='apple-touch-icon'
+      sizes='180x180'
+      href='/fav/apple-touch-icon.png'
+    />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='32x32'
+      href='/fav/favicon-32x32.png'
+    />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='16x16'
+      href='/fav/favicon-16x16.png'
+    />
+    <link rel='manifest' href='/fav/site.webmanifest' />
+    <link
+      rel='mask-icon'
+      href='/fav/safari-pinned-tab.svg'
+      color='#5bbad5'
+    />
+    <meta
+      name='msapplication-TileColor'
+      content='#da532c'
+    />
+    <meta name='theme-color' content='#ffffff' />
+
+    <link href='css/normalize.css' rel='stylesheet' />
+
+    <link href='css/slack.css' rel='stylesheet' />
+
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+
+  <body>
+    <div class='page'>
+      <section class='page_section'>
+        <div class='page_content hero_section'>
+
+          <div class="hero">
+            <div class="hero_content">
+              <span class="hero_label">Slack Features</span>
+              <h1 class="hero_title">One platform for your team and your work</h1>
+              <p class="hero_info double_line">All the features of Slack work together so you can, too.</p>
+              <div class="hero_buttons">
+                <a href="#" class="button button_primary click">Try for free</a>
+                <a href="#" class="button button_secondary click">See all features</a>
+              </div>
+
+              <img src="/img/hero.png" alt="Hero" class="hero_image">
+            </div>
+          </div> 
+
+          <div class="brands">
+            <img src="/img/brands/airbnb.png" alt="airbnb" class="brands_image">
+            <img src="/img/brands/intuit.png" alt="intuit" class="brands_image">
+            <img src="/img/brands/newscorp.png" alt="newscorp" class="brands_image">
+            <img src="/img/brands/onemedical.png" alt="onemedical" class="brands_image">
+            <img src="/img/brands/sonos.png" alt="sonos" class="brands_image">
+            <img src="/img/brands/target.png" alt="target" class="brands_image">
+            <img src="/img/brands/uber.png" alt="uber" class="brands_image">
+            <img src="/img/brands/va.png" alt="va" class="brands_image">
+          </div>
+
+      </section>
+
+      <section class='page_section page_section_light'>
+        <div class='page_content features_section features_section_img1'>
+          <h2 class="features_title">Work more easily with everyone</h2>
+          <p class="features_description double_line">Stay on the same page and make decisions faster by bringing all of your work communication into one place.</p>
+
+          <div class="features_grid_4">
+            {{> feat_card img_url='/svg/feature/connect.svg' title='Slack Connect' description='Collaborate with teams at other companies the same way you do with teams at your own.'}}
+            {{> feat_card img_url='/svg/feature/channels.svg' title='Channels'}} 
+            {{> feat_card img_url='/svg/feature/huddles.svg' title='Huddles'}}
+            {{> feat_card img_url='/svg/feature/clips.svg' title='Clips'}}
+            {{> feat_card img_url='/svg/feature/canvas.svg' title='Canvas'}}
+            {{> feat_card img_url='/svg/feature/messaging.svg' title='Messaging'}}
+            {{> feat_card img_url='/svg/feature/access.svg' title='Accessibility'}} 
+          </div>
+        </div>
+      </section>
+
+      {{!-- Home task  --}}
+      <section class='page_section page_section_light'>
+        <div class="page_content features_section features_section2">
+          <div class="features_grid_2">
+            <span class="features_section_img2"></span>
+            <div class="features_2_section_title">
+              <h2 class="features_title">What you need, when you need it</h2>
+              <p class="features_description double_line">Spend less time shuffling tabs with a comprehensive message archive and all your work tools at your fingertips.</p>            
+            </div>            
+          </div>
+          
+          <div class="features_grid_3">
+            {{> feat_card }}
+            {{> feat_card img_url='/svg/feature/integration.svg' title='Apps and Integrations' description='Streamline work by connecting Slack with other services like Google Drive, Office 365 and over 2,200 more.'}}
+            {{> feat_card img_url='/svg/feature/builder.svg' title='Workflow Builder' description='Automate routine actions and communication, so you can get back to the kind of work only humans can do.'}}
+            {{> feat_card img_url='/svg/feature/search.svg' title='Search'}}
+            {{> feat_card img_url='/svg/feature/sharing.svg' title='File sharing'}}
+          </div>          
+        </div>
+      </section>
+
+      <section class="page_section customer_section">
+        <div class="customer">
+          <span class="deliveroo_main_img"></span>
+
+          <div class="deliveroo_data">
+            <quote class="deliveroo_quote">“The thing that keeps us connected the most is Slack. It’s a very immediate and straightforward 
+  method of communication, and really the only channel that people prefer and enjoy using.”</quote>
+            <span class="deliveroo_img"></span>
+            <span class="deliveroo_name">Will Sprunt, CIO, Deliveroo</span>            
+          </div>
+        </div>        
+      </section>
+
+      <section class="page_section promo_section">
+        <div class="promo">
+          
+          <h3 class="promo_title">Explore more about working in Slack</h3>
+          <div class="promo_data">
+            {{> promo_card url_img='/img/promo-slack.png' card_sub_title='Slack Tutorials' card_title='Slack 101'}}
+            {{> promo_card url_img='/img/promo-figure.png' card_sub_title='Slack vs. Email' card_title='An easier, more
+organized way to work'}}
+            {{> promo_card url_img='/img/promo-customers.png' card_sub_title='Customer Stories' card_title='How Fastly uses Slack
+Connect to wow
+enterprise customers'}}
+          </div>
+        </div>        
+      </section>
+    </div>
+  </body>
+
+</html>
