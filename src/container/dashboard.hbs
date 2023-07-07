@@ -53,98 +53,109 @@
         </div>
 
         <nav class='vertical vertical--small'>
-          <a
-            href='#'
-            class='nav-button nav-button--active click'
-          >
-            <span
-              class='icon nav-button__icon'
-              style="background-image: url('/svg/nav/home.svg')"
-            ></span>
-            <span class='text text--light'>Home</span>
-          </a>
-
-          <div class='click relative'>
-            <div class='field field--select'>
-              <span class='text text--light'>
-                Choose...</span>
-            </div>
-
-            <select class='field__select' name='' id=''>
-              <option value='dog'>dog</option>
-              <option value='cat'>cat</option>
-              <option value='hamster'>hamster</option>
-              <option value='parrot'>parrot</option>
-              <option value='spider'>spider</option>
-            </select>
-          </div>
-
+          {{> navButton title='Home' img='home.svg' active=true}}
+          {{> navButton title='Orders' img='orders.svg' active=false}}
+          {{> navButton title='Products' img='products.svg' active=false}}
         </nav>
       </aside>
+
       <header class='header'>
         <div class='layout header__content text--small'>
           <div class='header__search relative'>
-
-            <span
-              class='icon header__icon-search'
-              style="background-image: url('/svg/header/search.svg')"
-            ></span>
-
-            <span
-              class='icon header__icon-settings icon--button icon--color-blue click'
-              style="background-image: url('/svg/header/settings.svg')"
-            ></span>
+            {{> headerIcon icon-class='header__icon-search' color-class='' img='search.svg'}}
 
             <input
               type='text'
-              class='text field field--header'
+              class='text field field--header border-line'
               placeholder='Search'
             />
 
+            {{> headerIcon icon-class='header__icon-settings' color-class='icon--color-blue' img='settings.svg'}}
           </div>
 
-          <div>icons</div>
+          <div class="header__icons">
+            {{> headerIcon icon-class='header__icons-icon' color-class='icon--color-yellow-light' img='signal.svg'}}
+            {{> headerIcon icon-class='header__icons-icon' color-class='icon--color-blue-light' img='translate.svg'}}
+            {{> headerIcon icon-class='header__icons-icon' color-class='icon--color-yellow-light' img='bell.svg'}}
+          </div>
         </div>
 
       </header>
+
       <main class='main'>
         <div class='layout'>
           <section class='box analytic__block'>
-            <div
-              class='analytic analytic--double analytic--blue'
-            >
-              <span
-                class='icon analytic__button icon--button icon--color-blue click'
-                style="background-image: url('/svg/analytic/order.svg')"
-              ></span>
+            {{> analyticCardDouble title='$500.00' text='Total earning' 
+              color-class='analytic--purple' icon-color-class='icon--color-purple-dark' img='money.svg' showArrow=true}}
 
-              <div
-                class='vertical vertical--small relative'
-              >
-                <div
-                  class='analytic__title text text--light'
-                >$961</div>
-                <div
-                  class='text text--small text--lighter'
-                >Total Order</div>
+            {{> analyticCardDouble title='$961' text='Total Order' 
+              color-class='analytic--blue' icon-color-class='icon--color-blue' img='order.svg' showArrow=false}}
 
-                <span
-                  class='icon analytic__arrow'
-                  style="background-image: url('/svg/blue-arrow.svg')"
-                ></span>
+            {{> analyticCardSingle title='$203k' text='Total Income' 
+              color-class='analytic--blue' icon-color-class='icon--color-blue' img='money.svg'}}
+
+            {{> analyticCardSingle title='$203k' text='Total Income' 
+              color-class='' icon-color-class='icon--color-yellow-light' img='shop.svg'}}
+          </section>
+        
+          <section class=" purchase__block">
+            <div class="purchase__list">
+              <div class="purchase__item vertical box">
+                <h2 class="text text--heading">Purchase list</h2>
+
+                <div class="sales__items divider">
+                  {{> saleItem heading='ID437661' text='May 11, 2023, 14:21'}}
+                  {{> saleItem heading='AirOn ProCam' text='7/8 USB Type-C'}}
+                  {{> saleItem heading='132.32 EUR' text='Not paid' color-text='text--warning'}}
+                  {{> saleItem heading='Customer' text='robin@com.de'}}
+                </div>
+
+                <div class="sales__items divider">
+                  {{> saleItem heading='ID437661' text='May 11, 2023, 14:21'}}
+                  {{> saleItem heading='PHILIPS Essential' text='HD9200/90'}}
+                  {{> saleItem heading='543 USD' text='Pay by STRIPE' color-text='text--success'}}
+                  {{> saleItem heading='Customer' text='dima@com.ua'}}
+                </div>
               </div>
             </div>
 
-            <div
-              class='analytic analytic--double'
-            >test</div>
-            <div class='analytic'>test
-              <div>text</div>
-              <div>text</div>
+            <div class="box">
+              <div class="payment__list">
+                <h2 class="text text--heading">Payment</h2>
+
+                <div class="payment__pay-check divider">
+                  {{> radioButton input-class='form-check-input' input-type='radio' name='radio' id='radio1' 
+                    isChecked=true input-label-class='form--check-label' text='Credit card'}}
+
+                  {{> radioButton input-class='form-check-input' input-type='radio' name='radio' id='radio2' 
+                    isChecked=false input-label-class='form--check-label' text='Debit card'}}
+
+                  {{> radioButton input-class='form-check-input' input-type='radio' name='radio' id='radio3' 
+                    isChecked=false input-label-class='form--check-label' text='PayPal'}}
+                </div>
+
+                <div class="payment__form ">
+                  {{> inputBlock id='cardName' title='Name on card' type='text'}}
+                  {{> inputBlock id='cardNumber' title='Credit card number' type='number'}}
+                  {{> inputBlock id='cardDate' title='Expiration' type='date'}}
+                  {{> inputBlock id='cardCvv' title='CVV' type='number'}}
+                </div>
+
+                <div class="payment__form divider">
+                  {{> selectBlock id='countrySelect1' title='Country'}}
+                  {{> selectBlock id='countrySelect2' title='State'}}
+                </div>
+
+                <div class="checkout divider">
+                  <button class="payment__button click">Continue to checkout</button>
+                </div>                
+              </div>
+
             </div>
-            <div class='analytic'>test</div>
+
           </section>
         </div>
+
       </main>
     </div>
   </body>
