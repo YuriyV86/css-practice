@@ -1,0 +1,24 @@
+<div class='analytic analytic--double {{#if color-class}}{{color-class}}{{else}}border-line{{/if}}'>
+  <span
+    class='icon analytic__button icon--button 
+      {{#if icon-color-class}}{{icon-color-class}}{{else}}border-line{{/if}}
+      click'
+    style="background-image: url('/svg/analytic/{{img}}')"
+  ></span>
+
+  <div class='vertical vertical--small relative'>
+    <div
+      class='analytic__title text {{#if color-class}}text--light{{/if}} text--bold'
+    >{{title}}</div>
+    <div
+      class='text text--small {{#if color-class}}text--lighter{{else}}text--gray{{/if}}'
+    >{{text}}</div>
+
+    {{#if showArrow}}
+      <span
+        class='icon analytic__arrow'
+        style="background-image: url('/svg/blue-arrow.svg')"
+      ></span>
+    {{/if}}
+  </div>
+</div>

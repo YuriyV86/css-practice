@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <title>
+      Dashboard Page
+    </title>
+
+    <meta charset='utf-8' />
+
+    <link
+      rel='apple-touch-icon'
+      sizes='180x180'
+      href='/fav/apple-touch-icon.png'
+    />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='32x32'
+      href='/fav/favicon-32x32.png'
+    />
+    <link
+      rel='icon'
+      type='image/png'
+      sizes='16x16'
+      href='/fav/favicon-16x16.png'
+    />
+    <link rel='manifest' href='/fav/site.webmanifest' />
+    <link
+      rel='mask-icon'
+      href='/fav/safari-pinned-tab.svg'
+      color='#5bbad5'
+    />
+    <meta
+      name='msapplication-TileColor'
+      content='#da532c'
+    />
+    <meta name='theme-color' content='#ffffff' />
+
+    <link href='css/normalize.css' rel='stylesheet' />
+
+    <link href='css/dashboard.css' rel='stylesheet' />
+
+    <meta
+      name='viewport'
+      content='viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
+    />
+  </head>
+
+  <body>
+    <div class='page page--dashboard'>
+      <aside class='page__aside aside vertical'>
+        <div class='text aside__logo'>
+          Sidebar
+        </div>
+
+        <nav class='vertical vertical--small'>
+          {{> navButton title='Home' img='home.svg' active=true}}
+          {{> navButton title='Orders' img='orders.svg' active=false}}
+          {{> navButton title='Products' img='products.svg' active=false}}
+        </nav>
+      </aside>
+
+      <header class='header'>
+        <div class='layout header__content text--small'>
+          <div class='header__search relative'>
+            {{> headerIcon icon-class='header__icon-search' color-class='' img='search.svg'}}
+
+            <input
+              type='text'
+              class='text field field--header border-line'
+              placeholder='Search'
+            />
+
+            {{> headerIcon icon-class='header__icon-settings' color-class='icon--color-blue' img='settings.svg'}}
+          </div>
+
+          <div class="header__icons">
+            {{> headerIcon icon-class='header__icons-icon' color-class='icon--color-yellow-light' img='signal.svg'}}
+            {{> headerIcon icon-class='header__icons-icon' color-class='icon--color-blue-light' img='translate.svg'}}
+            {{> headerIcon icon-class='header__icons-icon' color-class='icon--color-yellow-light' img='bell.svg'}}
+          </div>
+        </div>
+
+      </header>
+
+      <main class='main'>
+        <div class='layout'>
+          <section class='box analytic__block'>
+            {{> analyticCardDouble title='$500.00' text='Total earning' 
+              color-class='analytic--purple' icon-color-class='icon--color-purple-dark' img='money.svg' showArrow=true}}
+
+            {{> analyticCardDouble title='$961' text='Total Order' 
+              color-class='analytic--blue' icon-color-class='icon--color-blue' img='order.svg' showArrow=false}}
+
+            {{> analyticCardSingle title='$203k' text='Total Income' 
+              color-class='analytic--blue' icon-color-class='icon--color-blue' img='money.svg'}}
+
+            {{> analyticCardSingle title='$203k' text='Total Income' 
+              color-class='' icon-color-class='icon--color-yellow-light' img='shop.svg'}}
+          </section>
+        
+          <section class=" purchase__block">
+            <div class="purchase__list">
+              <div class="purchase__item vertical box">
+                <h2 class="text text--heading">Purchase list</h2>
+
+                <div class="sales__items divider">
+                  {{> saleItem heading='ID437661' text='May 11, 2023, 14:21'}}
+                  {{> saleItem heading='AirOn ProCam' text='7/8 USB Type-C'}}
+                  {{> saleItem heading='132.32 EUR' text='Not paid' color-text='text--warning'}}
+                  {{> saleItem heading='Customer' text='robin@com.de'}}
+                </div>
+
+                <div class="sales__items divider">
+                  {{> saleItem heading='ID437661' text='May 11, 2023, 14:21'}}
+                  {{> saleItem heading='PHILIPS Essential' text='HD9200/90'}}
+                  {{> saleItem heading='543 USD' text='Pay by STRIPE' color-text='text--success'}}
+                  {{> saleItem heading='Customer' text='dima@com.ua'}}
+                </div>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="payment__list">
+                <h2 class="text text--heading">Payment</h2>
+
+                <div class="payment__pay-check divider">
+                  {{> radioButton input-class='form-check-input' input-type='radio' name='radio' id='radio1' 
+                    isChecked=true input-label-class='form--check-label' text='Credit card'}}
+
+                  {{> radioButton input-class='form-check-input' input-type='radio' name='radio' id='radio2' 
+                    isChecked=false input-label-class='form--check-label' text='Debit card'}}
+
+                  {{> radioButton input-class='form-check-input' input-type='radio' name='radio' id='radio3' 
+                    isChecked=false input-label-class='form--check-label' text='PayPal'}}
+                </div>
+
+                <div class="payment__form ">
+                  {{> inputBlock id='cardName' title='Name on card' type='text'}}
+                  {{> inputBlock id='cardNumber' title='Credit card number' type='number'}}
+                  {{> inputBlock id='cardDate' title='Expiration' type='date'}}
+                  {{> inputBlock id='cardCvv' title='CVV' type='number'}}
+                </div>
+
+                <div class="payment__form divider">
+                  {{> selectBlock id='countrySelect1' title='Country'}}
+                  {{> selectBlock id='countrySelect2' title='State'}}
+                </div>
+
+                <div class="checkout divider">
+                  <button class="payment__button click">Continue to checkout</button>
+                </div>                
+              </div>
+
+            </div>
+
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </body>
+
+</html>
